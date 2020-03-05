@@ -2,6 +2,7 @@ def setup():
     size(800,800)
 def draw():
     if mousePressed:
-        line(mouseX,mouseX, mouseY, mouseY)
+        rect(mouseX,mouseY,80,80)    
     else:
-        rect(mousePressed,50,100,100)
+        line(mouseX,mouseY,70,50)
+    
