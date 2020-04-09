@@ -1,8 +1,3 @@
-x=0.0
-y=200.0
-speed=10.0
-      
-
 def setup():
     size(600,800)
     frameRate(5)
@@ -15,28 +10,32 @@ def setup():
     lista= []
     for klucz,wartosc in slownik.items():
         lista.append(wartosc)
+    # żeby mieć pewność, że kod wywołą się podczas startu programu, trzeba umieścić w setup, po za funkcjami to zła praktyka
+    global x, y
+    global speedX, speedY # wystarczyło dla każdej osi liczyć oddzielnie, wówczasbędzie zawracać niezależnie, a nie odbijać oba kierunki gdy natrafi na choć jedną ścianę.
+    x=0.0
+    y=0.0
+    speedX=10.0
+    speedY=10.0
 
 def draw():
     move()
     display()
 
 def move():
-    global x
-    global y
-    global speed
-    x = x + speed
-    if x > width:
-        speed=speed*-1
-    if x < 0:
-        speed=speed*-1
+    global x, y, speedX, speedY
+    x += speedX
+    if x > width or x < 0:
+        speedX*=-1
     
-    y = y + speed
-    if y > height:
-        speed=speed*-1
-    if y < 0:
-        speed=speed*-1
+    y += speedY
+    if y > height or y < 0:
+        speedY*=-1
+        
 def display():
     global iteracja
     iteracja+=10
     rect(x, y, 100, 100)
     fill(*lista[iteracja%len(lista)])
+    
+#1,5pkt
