@@ -1,7 +1,7 @@
 add_library('pdf')
 def setup():
     global img 
-    size (400,400)
+    size (400,400) # to nie jest proporcja zdjęcia dokumentowego
     img=loadImage ('jj.jpg')
     beginRecord(PDF, "outjj.pdf")
 
@@ -27,5 +27,6 @@ def draw():
         rect(180,190,40,1) #2
         rect(70,190,40,1) #2
         rect(290,190,40,1) #2
-    endRecord()    
-    
+    endRecord() # teraz zapisze na końcu pierwszej klatki, więc nie bardzo mamy szansę kliknąć myszą i zapisać wariant pierwszy
+
+# 1,5pkt
