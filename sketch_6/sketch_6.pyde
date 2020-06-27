@@ -1,4 +1,4 @@
-class Kwadrat():
+class Kwadrat(): # nie byłopotrzeby zmieniać tej klasy..
     def __init__(self, bok): 
         self.bok = bok
     def sketch(self, x, y, z, a):
@@ -6,7 +6,7 @@ class Kwadrat():
         self.y = y
         self.z = z
         self.a = a
-        rect(self.x, self.y, self.z, self.a)
+        rect(self.x, self.y, self.z, self.a) # mało kwadratowy ten kwadrat ;)
             
 class KolorowyKwadrat(Kwadrat):
     def sketchKolorowy(self,x,y,z,a,kolor):
@@ -18,3 +18,5 @@ def setup():
     size(500, 500)
     malyKolorowyKwadrat=KolorowyKwadrat(200.30)
     malyKolorowyKwadrat.sketchKolorowy(29,51,48,21,45)
+    
+# 1 pkt
