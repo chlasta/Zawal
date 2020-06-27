@@ -5,14 +5,14 @@ class Pet():
     def speak(self): 
         super().__init__()
         return 'no sound'
-class Bunny(Pet):
+class Bunny(Pet): # program sporo traci na usunięciu pozostałych zwierząt
     def __init__(self, name):
         self.name = name
     def speak(self):
         text('tuptup', random(400,400), random(400,400))    
     def comehere(self):
         image(loadImage("indeks.jpg"), random(50, width-70), random(50, height-100))
-    def __add__(self, other):
+    def __add__(self, other): # miało być odejmowanie
         return self.name[0]+ ' i ' + other.name[0]
 
 def setup():
@@ -31,4 +31,5 @@ def mouseClicked():
         pet.speak() 
         if isinstance(pet, Bunny):
             pet.comehere()
-        
+ 
+# 1pkt       
