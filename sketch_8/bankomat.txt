@@ -1,0 +1,13 @@
+Nazwa klasy: bankomat
+atrybut_klasy: ilosc_wcisniec_wszystki_obiektow_klasy
+atrybut: wyplata_pieniedzy
+metoda: wyplac_pieniadze
+atrybut: wplata_pieniedzy
+metoda:wyplac_pieniadze
+atrybut: stan_konta
+metoda: sprawdz_stan_konta
+
+przydała by się kalsa karta, wówczas część akcji przypadłoby na nią
+przypominam też, że atrybuty to rzeczowniki, jak ilość_pieniedzy_w_bankomacie, czy saldo_konta_karty; natomiast metody to czasowniki typu wpłąć/wypłać
+
+0,25pkt/1,5pkt

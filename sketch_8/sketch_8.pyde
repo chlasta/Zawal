@@ -55,10 +55,10 @@ def draw():
 def mouseClicked(): 
     if mouseX >100 and mouseX<200:
         if mouseY >10 and mouseY <30:
-            library.lendBook(Madzia.requestBook("Naocznosc")) 
+            library.lendBook(Madzia.requestBook("Naocznosc"))
+            library.lendBook(Julia.requestBook("Achaja")) # dublowanie warunku jest niewskazane
         if mouseY >40 and mouseY <60:
             library.addBook(Madzia.returnBook())
-        if mouseY >10 and mouseY <30:
-            library.lendBook(Julia.requestBook("Achaja"))
-        if mouseY >40 and mouseY <60:
             library.addBook(Julia.returnBook())
+            
+# 0,5/0,5pkt za tą część
