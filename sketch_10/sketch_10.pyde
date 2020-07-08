@@ -61,13 +61,16 @@ def mouseClicked(): # poklikajcie kilkakrotnie w przyciski: wypożyczneie dwa ra
 import unittest            
 class TestBiblioteka(unittest.TestCase):
     def test_one_book(self):
-        text='Naoczność'
-        result=avaiableBooks
-        self.assertEqal(result,'Naoczność')
+        ja= Customer()
+        ja.requestBook('Naoczność')
+        result=ja.book
+        self.assertEqual(result,'Naoczność')
     def test_all_books(self):
-        text='Naoczność', 'Harry Potter', 'Sesns sztuki'
-        result= avaiableBooks
-        self.assertEqual(result, 'Naoczność', 'Harry Potter', 'Sesns sztuki')
+        bib = Library(['Naoczność', 'Harry Potter', 'Sesns sztuki'])
+        result=bib.availableBooks
+        self.assertEqual(result, ['Naoczność', 'Harry Potter', 'Sesns sztuki'])
         
-    if __name__ == '__main__': 
-         unittest.main()     
+if __name__ == '__main__': 
+    unittest.main()
+    
+# 1,25pkt
